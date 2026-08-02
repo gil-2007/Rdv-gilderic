@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ff5c93">
+
+    <title>Une petite sortie... 💗</title>
+
+    <!-- IMPORTANT : connexion avec le CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Les petits cœurs animés -->
+    <div id="hearts"></div>
+
+    <main class="app">
+
+        <!-- ========================= -->
+        <!-- PAGE 1 -->
+        <!-- ========================= -->
+
+        <section class="screen active" id="screen1">
+
+            <div class="card hero-card">
+
+                <div class="cute">🐶</div>
+
+                <p class="tiny">
+                    POV : je tente ma chance avec toi 🥹
+                </p>
+
+                <h1>
+                    Blessing, tu veux sortir avec moi ? 💗
+                </h1>
+
+                <p class="sub">
+                    Une petite sortie rien que tous les deux...
+                </p>
+
+                <div class="buttons">
+
+                    <button class="btn yes" id="yesBtn">
+                        Oui 💕
+                    </button>
+
+                    <button class="btn no" id="noBtn">
+                        Non 🙈
+                    </button>
+
+                </div>
+
+                <p class="hint" id="noHint"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PAGE 2 : DATE / HEURE -->
+        <!-- ========================= -->
+
+        <section class="screen" id="screen2">
+
+            <div class="card">
+
+                <div class="cute">
+                    🥹
+                </div>
+
+                <p class="tiny">
+                    Je savais que tu allais dire oui !
+                </p>
+
+                <h2>
+                    Alors... quand est-ce que tu es libre ? 📅
+                </h2>
+
+                <p class="sub">
+                    Choisis le jour qui te convient le mieux.
+                </p>
+
+
+                <input
+                    class="date-input"
+                    type="date"
+                    id="dateInput"
+                >
+
+
+                <div class="choices" id="timeChoices">
+
+                    <button class="choice" data-time="17h00">
+                        🕔 17h00
+                    </button>
+
+                    <button class="choice" data-time="18h00">
+                        🌇 18h00
+                    </button>
+
+                    <button class="choice" data-time="19h00">
+                        🌙 19h00
+                    </button>
+
+                    <button class="choice" data-time="20h00">
+                        ✨ 20h00
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="btn primary next"
+                    id="dateNext"
+                    disabled>
+                    Continuer 💗
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PAGE 3 : REPAS -->
+        <!-- ========================= -->
+
+        <section class="screen" id="screen3">
+
+            <div class="card">
+
+                <div class="cute">
+                    😋
+                </div>
+
+                <p class="tiny">
+                    Maintenant, la question importante...
+                </p>
+
+                <h2>
+                    De quoi as-tu envie ? 🍽️
+                </h2>
+
+                <p class="sub">
+                    Choisis ce qui te ferait plaisir.
+                </p>
+
+
+                <div class="food-grid" id="foodChoices">
+
+                    <button class="food" data-food="Pizza">
+                        🍕
+                        <span>Pizza</span>
+                    </button>
+
+                    <button class="food" data-food="Sushi">
+                        🍣
+                        <span>Sushi</span>
+                    </button>
+
+                    <button class="food" data-food="Burgers">
+                        🍔
+                        <span>Burgers</span>
+                    </button>
+
+                    <button class="food" data-food="Pâtes">
+                        🍝
+                        <span>Pâtes</span>
+                    </button>
+
+                    <button class="food" data-food="Tacos">
+                        🌮
+                        <span>Tacos</span>
+                    </button>
+
+                    <button class="food" data-food="Ramen">
+                        🍜
+                        <span>Ramen</span>
+                    </button>
+
+                </div>
+
+
+                <div class="custom-food">
+
+                    <input
+                        id="customFood"
+                        type="text"
+                        placeholder="Ou écris ce que tu veux 😌">
+
+                </div>
+
+
+                <button
+                    class="btn primary next"
+                    id="foodNext"
+                    disabled>
+
+                    J'ai choisi 💕
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PAGE 4 : RÉCAPITULATIF -->
+        <!-- ========================= -->
+
+        <section class="screen" id="screen4">
+
+            <div class="card final-card">
+
+                <div class="cute big">
+                    💗
+                </div>
+
+                <p class="tiny">
+                    C'est officiellement réservé... enfin presque 😭
+                </p>
+
+                <h2>
+                    Notre petite sortie
+                </h2>
+
+
+                <div class="summary">
+
+                    <div>
+                        <span>📅</span>
+                        <strong id="summaryDate">
+                            —
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>🕐</span>
+                        <strong id="summaryTime">
+                            —
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>🍽️</span>
+                        <strong id="summaryFood">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <p class="love">
+
+                    Je suis content que tu aies dit oui. 🥹❤️
+                    <br><br>
+
+                    Prépare-toi, je passe te prendre.
+
+                </p>
+
+
+                <button
+                    class="btn primary"
+                    id="confirmBtn">
+
+                    C'est confirmé 💞
+
+                </button>
+
+
+                <button
+                    class="text-btn"
+                    id="restartBtn">
+
+                    Recommencer
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PAGE 5 : CONFIRMATION -->
+        <!-- ========================= -->
+
+        <section class="screen" id="screen5">
+
+            <div class="card final-card">
+
+                <div class="cute big">
+                    🥰
+                </div>
+
+                <h2>
+                    Rendez-vous confirmé !
+                </h2>
+
+
+                <p class="love">
+
+                    Blessing, merci d'avoir accepté. ❤️
+
+                    <br><br>
+
+                    Je garde cette date pour nous deux.
+
+                    <br>
+
+                    À très vite pour notre sortie. 💗
+
+                </p>
+
+
+                <div class="ticket">
+
+                    <span>
+                        💕 GILDERIC × BLESSING 💕
+                    </span>
+
+                    <small id="ticketDetails">
+                        Notre petite sortie
+                    </small>
+
+                </div>
+<button
+    class="btn primary"
+    id="sendWhatsAppBtn">
+
+    💌 Envoyer mes choix à Gilderic
+
+</button>
+
+<br>
+
+<button
+    class="text-btn"
+    id="restartBtn2">
+
+    Rejouer l'invitation
+
+</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast"></div>
+
+
+    <!-- IMPORTANT : connexion avec JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
